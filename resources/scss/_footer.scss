@@ -1,0 +1,50 @@
+footer.sticky-footer {
+  padding: 2rem 0;
+  flex-shrink: 0;
+  .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+}
+
+body.sidebar-toggled {
+  footer.sticky-footer {
+    width: 100%;
+  }
+}
+
+.note-report{
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 12px;
+  div{
+    align-self: center;
+  }
+  span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .green{
+    span{
+      background: #0c9204;
+    }
+  }
+  .yellow{
+    span{
+      background: #fff139;
+    }
+  }
+  .dark{
+    span{
+      background: red;
+    }
+  }
+}
+
+.toast.show{
+  display: block !important;
+}

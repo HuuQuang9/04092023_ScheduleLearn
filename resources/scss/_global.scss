@@ -1,0 +1,142 @@
+// Global component styles
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+a {
+    &:focus {
+        outline: none;
+    }
+}
+
+html ::-webkit-scrollbar {
+    border-radius: 0px;
+    width: 8px;
+    height: 8px;
+}
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+    height: 8px;
+}
+
+html ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.09);
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.09);
+}
+
+html ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+// Main page wrapper
+#wrapper {
+    display: flex;
+    #content-wrapper {
+        background-color: $gray-100;
+        width: 100%;
+        overflow-x: hidden;
+        #content {
+            flex: 1 0 auto;
+        }
+    }
+}
+
+.wrapper-custom {
+    overflow-y: auto;
+    height: calc(100vh - ($topbar-base-height));
+}
+
+// Set container padding to match gutter width instead of default 15px
+.container,
+.container-fluid {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+}
+
+// Scroll to top button
+.scroll-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    text-align: center;
+    color: $white;
+    background: fade-out($gray-800, 0.5);
+    line-height: 46px;
+    &:focus,
+    &:hover {
+        color: white;
+    }
+    &:hover {
+        background: $gray-800;
+    }
+    i {
+        font-weight: 800;
+    }
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.btn-user,
+.form-control-user {
+    font-size: 1rem !important;
+}
+
+.form-control {
+    button {
+        // border: 1px solid #d1d3e2 !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: #fff !important;
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+}
+
+.btn-light {
+    border: 1px solid #d1d3e2;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+    outline: none !important;
+    border-color: #bac8f3 !important;
+}
+
+.white-space-no-wrap {
+    white-space: nowrap;
+}
+
+.form-content {
+    padding: 20px;
+    border-radius: 0.35rem;
+    background-color: #fff;
+}
+
+.form-main .required:after {
+    content: " *";
+    color: red;
+    font-weight: 100;
+}
